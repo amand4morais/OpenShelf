@@ -1,24 +1,29 @@
-<div class="book-home">
-    <h2>Insert new book</h2>
-</div>
+<section class="insert-book">
+    <h2 class="book-home">Insert new book</h2>
 
-<form id="book-form" method="POST" action="/catalogue/save">
-    <div class="book_title">
-        <input type="text" name="book_title" placeholder="Insert the title of the book">
-    </div>
-    <div class="book_pages">
-        <input type="text" name="book_pages" placeholder="Insert the number of pages">
-    </div>
-    <div class="book_year">
-        <input type="text" name="book_year" placeholder="Insert the year of publishing">
-    </div>
-    <div class="book_genre">
-        <input type="text" name="book_genre" placeholder="Insert the genre">
-    </div>
-    <div class="book_author">
-        <input type="text" name="book_author" placeholder="Insert the author's name">
-    </div>
-    <div class="button_book">
-        <button type="submit">Insert book</button>
-    </div>
-</form>
+    <form id="book-form" method="POST" action="/catalogue/save">
+        <div class="book_title">
+            <p class="question">Insert the title of the book</p>
+            <input type="text" name="book_title" placeholder="Title">
+        </div>
+        <div class="book_pages">
+            <p class="question">Insert the number of pages</p>
+            <input type="text" name="book_pages" placeholder="123">
+        </div>
+        <div class="book_year">
+            <p class="question">Insert the year of publishing</p>
+            <input type="text" name="book_year" placeholder="01/01/2001">
+        </div>
+        <div class="book_genre">
+            <p class="question">Insert the genre</p>
+            <input type="text" name="book_genre" placeholder="Genre">
+        </div>
+        <div class="book_author">
+            <p class="question">Insert the author's name</p>
+            <input type="text" name="book_author" placeholder="Author's name">
+        </div>
+        <div>
+            <button class="btn-signin" type="submit">Insert book</button>
+        </div>
+    </form>
+</section>

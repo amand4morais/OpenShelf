@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Shelf - Your open library</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@
             <div>
                 <button class="btn-signin">Sign in</button>
                 <button class="btn-login">Login</button>
-                <button class="btn-profile"><img class="img-profile" src="assets/profile.webp" alt="My profile"></button>
+                <button class="btn-profile"><img class="img-profile" src="/assets/profile.webp" alt="My profile"></button>
             </div>
         </nav>
     </header>
