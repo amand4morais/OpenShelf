@@ -11,8 +11,8 @@
         <nav class="navbar">
             <div class="logo">Open Shelf</div>
             <ul>
-                <li class="nav-links"><a href="views/main-page.view.php">Main</a></li>
-                <li class="nav-links"><a href="views/catalogue.view.php">Catalogue</a></li>
+                <li class="nav-links"><a href="/main-page">Home</a></li>
+                <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
                 <li class="nav-links"><a href="">Lending book</a></li>
                 <li class="nav-links"><a href="">For author</a></li>
                 <li class="nav-links"><a href="">FAQs</a></li>

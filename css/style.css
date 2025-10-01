@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-  background-color: #2c3e50;
+  background-color: #2b043a;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@ body {
     cursor: pointer;
     font-size: 0.95rem;
     transition: background-color 0.3s ease;
-    background-color: #2c3e50;
+    background-color: #2b043a;
 }
 
 .img-profile {
@@ -79,7 +79,7 @@ body {
 }
 
 .btn-profile:hover {
-    background-color: #374d63;
+    background-color: #37064b;
 }
 
 .btn-signin {
@@ -100,8 +100,10 @@ body {
   background-color: #2980b9;
 }
 
+/* Parte do footer */
+
 footer {
-  background-color: #2c3e50;
+  background-color: #2b043a;
   color: #ecf0f1;
   text-align: center;
   padding: 15px 0;
@@ -109,7 +111,7 @@ footer {
   margin-top: 40px;
 }
 
-
+/* Parte da main page */
 
 .banner {
   position: relative;
@@ -119,21 +121,19 @@ footer {
   justify-content: flex-start;
   color: white;
   overflow: hidden;
-  background: url("assets/banner-book.jpg") no-repeat right center/cover; /* imagem do fundo */
+  background: url("assets/banner-book.jpg") no-repeat right center/cover; 
 }
 
-/* camada translúcida para escurecer e dar contraste ao texto */
 .banner-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.3));
+  background: linear-gradient(to right, rgba(127, 86, 155, 0.8), rgba(72, 36, 97, 0.8));
   z-index: 1;
 }
 
-/* conteúdo do banner */
 .banner-content {
   position: relative;
   z-index: 2;
@@ -163,6 +163,63 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+button a {
+  color: white;
+  text-decoration: none;
+}
+
 .banner button:hover {
   background-color: #16a085;
 }
+
+/* Parte do catálogo */
+
+.catalog {
+  padding: 60px 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.catalog h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.book-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
