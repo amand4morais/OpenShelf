@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenShelf: Your open library</title>
+    <title>Open Shelf - Your open library</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<header>
-    <div class="container">
-        <div id="main-menu">
-            <a href="/catalogue">Catalogue</a>
-            <a href="/my-profile">My profile</a>
-        </div>
-    </div>
-</header>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Open Shelf</div>
+            <ul>
+                <li class="nav-links"><a href="/main-page">Home</a></li>
+                <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
+                <li class="nav-links"><a href="/catalogue/search-to-lend">Lending book</a></li>
+                <li class="nav-links"><a href="">For author</a></li>
+                <li class="nav-links"><a href="">FAQs</a></li>
+            </ul>
+            <div>
+                <button class="btn-signin">Sign in</button>
+                <button class="btn-login">Login</button>
+                <a href="/my-profile">    
+                    <button class="btn-profile"><img class="img-profile" src="/assets/profile.webp" alt="My profile"></button>
+                </a>
+            </div>
+        </nav>
+    </header>

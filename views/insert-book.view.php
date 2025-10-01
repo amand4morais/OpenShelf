@@ -2,7 +2,7 @@
     <h2>Insert new book</h2>
 </div>
 
-<form id="book-form" method="POST" action="/catalogue/save">
+<form id="book-form" method="POST" action="/catalogue/save-book">
     <div class="book_title">
         <input type="text" name="book_title" placeholder="Insert the title of the book">
     </div>
