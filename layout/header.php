@@ -10,6 +10,7 @@
         <div id="main-menu">
             <a href="/catalogue">Catalogue</a>
             <a href="/my-profile">My profile</a>
+            <a href="/catalogue/search-to-lend">Get your book</a>
         </div>
     </div>
 </header>
