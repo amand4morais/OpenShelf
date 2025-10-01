@@ -3,6 +3,12 @@
         <button>Insert books</button>
     </a>
 </div>
+<div class="button_lend">
+    <a href="/catalogue/search-to-lend">
+        <button>Lend books</button>
+    </a>
+</div>
+
 <table>
     <tr>
         <th>Title</th>
