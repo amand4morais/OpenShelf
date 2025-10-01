@@ -37,4 +37,9 @@
             <button class="btn-signin">Insert books</button>
         </a>
     </div>
+    <div class="button_lend">
+        <a href="/catalogue/search-to-lend">
+            <button class="btn-signin">Lend books</button>
+        </a>
+    </div>
 </section>

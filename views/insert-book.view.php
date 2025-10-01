@@ -1,7 +1,7 @@
 <section class="insert-book">
     <h2 class="book-home">Insert new book</h2>
 
-    <form id="book-form" method="POST" action="/catalogue/save">
+    <form id="book-form" method="POST" action="/catalogue/save-book">
         <div class="book_title">
             <p class="question">Insert the title of the book</p>
             <input type="text" name="book_title" placeholder="Title">
