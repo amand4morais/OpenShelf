@@ -8,7 +8,7 @@ elseif ($action == 'register'):
 
     $action == 'insert_user';
 
-else if ($action == 'save'):
+elseif ($action == 'save'):
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') :
 
