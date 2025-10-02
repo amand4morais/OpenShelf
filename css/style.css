@@ -52,7 +52,7 @@ body {
 }
 
 .btn-signin,
-.btn-login {
+.btn-login, .btn-logoff, .btn-update, .btn-delete {
   margin-left: 10px;
   padding: 8px 15px;
   border: none;
@@ -91,12 +91,12 @@ body {
   background-color: #16a085;
 }
 
-.btn-login {
+.btn-login, .btn-update {
   background-color: #3498db;
   color: white;
 }
 
-.btn-login:hover {
+.btn-login:hover, .btn-update:hover {
   background-color: #2980b9;
 }
 
@@ -222,7 +222,7 @@ button a {
 
 /* Parte do catalogue */
 
-.btn-insertb {
+.btn-insertb, .button-lend {
   margin: 20px;
   text-align: center;
 }
@@ -271,7 +271,7 @@ table td[colspan] {
 
 /* Parte do Insert book */
 
-.insert-book {
+.insert-book, .register-login-user {
   padding: 60px 20px;
   max-width: 700px;
   margin: 0 auto;
@@ -301,17 +301,115 @@ table td[colspan] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-  #book-form input[type="text"]:focus {
-    border-color: #1abc9c;
-    box-shadow: 0 0 5px rgba(26,188,156,0.4);
-    outline: none;
-  } 
+#book-form input[type="text"]:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26,188,156,0.4);
+  outline: none;
+} 
 
-  .question {
-    margin: 5px;
-  }
+.question {
+  margin: 5px;
+}
 
+/* Parte do Register e Login */
 
+#register-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#register-login-form input[type="text"], input[type="email"] {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #7bc2b4;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#register-login-form input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26,188,156,0.4);
+  outline: none;
+} 
   
+/* Parte do my profile */
 
+.books-list {
+  text-align: center;
+}
+
+.btns-profile {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-delete {
+  background-color: rgb(184, 0, 0);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: rgb(154, 1, 1);
+}
+
+.btn-logoff {
+  background-color: rgb(211, 156, 15);
+  color: white;
+}
+
+.btn-logoff:hover {
+  background-color: darkgoldenrod;
+}
+
+
+/* Parte do for authors */
+
+.author-header {
+  background: linear-gradient(135deg, #bd6edc, #bb7ad7); /* roxo degradê */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 15px 15px; /* borda arredondada só embaixo */
+}
+
+.author-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.author-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botão "Register a New Book" */
+.button_add_book {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.button_add_book button {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button_add_book button:hover {
+  background-color: #16a085;
+}
+
+.title-authors {
+  font-size: 1.8rem;
+  margin: 40px 20px 20px;
+  padding-left: 10px;
+  text-align: center;
+}
 

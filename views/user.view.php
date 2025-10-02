@@ -4,8 +4,7 @@
     </a>
 </div>
 
-
-<h2>Users Registered</h2>
+<h2 class="book-home">Users Registered</h2>
 
 <ul class="user-list">
 
@@ -17,13 +16,16 @@
     ?>
 
             <li class="user-card">
-                <div class="username">
+                <div class="user-info">
+                    <strong>Name:</strong> <?php echo htmlspecialchars($user['name_user']); ?>
+                </div>
+                <div class="user-info">
                     <strong>Username:</strong> <?php echo htmlspecialchars($user['username']); ?>
                 </div>
-                <div class="user-email">
+                <div class="user-info">
                     <strong>Email:</strong> <?php echo htmlspecialchars($user['email_user']);  ?>
                 </div>
-                <div class="user-cpf">
+                <div class="user-info">
                     <strong>CPF>:</strong> <?php echo htmlspecialchars($user['cpf']);  ?>
                 </div>
             </li>
