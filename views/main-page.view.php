@@ -15,7 +15,6 @@
   <h2>New Arrivals</h2>
   <div class="book-grid">
     <div class="book-card">
-      <img src="assets/book1.jpg" alt="Book 1">
       <h3>The Silent Library</h3>
       <p>Author: John Smith</p>
     </div>
