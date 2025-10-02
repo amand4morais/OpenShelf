@@ -20,20 +20,46 @@
         
         if($_SERVER['REQUEST_METHOD'] === 'POST') :
 
-            $book_lended = $_POST['book'];
-            
-            if(!empty($book_lended)) :
-
+            $book_lended = $_POST['book'] ?? null;  
+                
+            if(!isset($_SESSION['my-books'])) :
+                
                 $_SESSION['my-books'][] = [
 
                     'book_lended' => $book_lended
                 ];
+
+                header("Location: /catalogue");
             
-            endif;
+            else :
+
+                if(!empty($book_lended)) :
+                
+                    foreach($_SESSION['my-books'] as $books) :
+                    
+                        if($book_lended === $books['book_lended']) :
+
+                            $_SESSION['error'] = "You have already lended this book, return the book to lend it again.";
+                        
+                            header("Location: /catalogue");
+                            exit();   
+                            
+                        endif;
+
+                    endforeach;
+
+                    $_SESSION['my-books'][] = [
+
+                        'book_lended' => $book_lended
+                    ];
+
+                    header('Location: /catalogue');
+
+                endif;
+
+            endif;    
 
         endif;
-
-        header('Location: /catalogue');
 
     elseif($action == 'save-book') :
 

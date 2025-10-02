@@ -1,3 +1,10 @@
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="error-message">
+        <?= $_SESSION['error']; ?>
+    </div>
+    <?php unset($_SESSION['error']); ?>
+<?php endif; ?>
+
 <section>
     <table>
         <tr>
@@ -6,6 +13,7 @@
             <th>Year</th>
             <th>Genre</th>
             <th>Author</th>
+            <th>Lend</th>
         </tr>
     
         <?php
@@ -18,9 +26,15 @@
                     echo '<td>' . $catalogue['book_pages'] . '</td>';
                     echo '<td>' . $catalogue['book_year'] . '</td>';
                     echo '<td>' . $catalogue['book_genre'] . '</td>';
-                    echo '<td>' . $catalogue['book_author'] . '</td></tr>';
-    
-                endforeach;
+                    echo '<td>' . $catalogue['book_author'] . '</td>';?>
+                    <form id="user-delete" method="POST" action="/catalogue/save-lend">
+
+                            <input type="hidden" name="book" value="<?= htmlspecialchars($catalogue['book_title'] ?? '')?>">
+                            <td><button type="submit">Lend</button></td></tr>
+
+                    </form>
+                    
+                <?php endforeach;
             
             else :
     
@@ -31,15 +45,10 @@
         ?>
     
     </table>
-    
+    <?php if($role == "admin") : ?>
     <div class="btn-insertb">
         <a href="/catalogue/insert">
             <button class="btn-signin">Insert books</button>
         </a>
     </div>
-    <div class="button_lend">
-        <a href="/catalogue/search-to-lend">
-            <button class="btn-signin">Lend books</button>
-        </a>
-    </div>
-</section>
+    <?php endif; ?>

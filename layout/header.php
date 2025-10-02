@@ -13,6 +13,7 @@
 
             $logged = $_SESSION["logged"] ?? "false";
             $user = $_SESSION["username"] ?? null;
+            $role = $_SESSION["role"] ?? "user";
 
             if($logged == "true") :
         
@@ -25,6 +26,9 @@
                 <li class="nav-links"><a href="/catalogue/search-to-lend">Lending book</a></li>
                 <li class="nav-links"><a href="/author">For author</a></li>
                 <li class="nav-links"><a href="">FAQs</a></li>
+                <?php if($role == "admin") : ?>
+                <li class="nav-links"><a href="/admin">Admin</a></li>
+                <?php endif; ?>    
             </ul>
 
             <a href="/my-profile">    

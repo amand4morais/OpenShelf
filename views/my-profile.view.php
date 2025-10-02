@@ -12,11 +12,17 @@
 
             if(isset($_SESSION['my-books'])) :
 
-                foreach($_SESSION['my-books'] as $books) :
+                foreach($_SESSION['my-books'] as $books) :?>
 
-                    echo '<li>' . $books['book_lended'] . '</li>';
+                    <form id="book-return" method="POST" action="/my-profile/return">
 
-                endforeach;
+                        <li><?=$books['book_lended']?>
+                            <input type="hidden" name="book" value="<?= htmlspecialchars($books['book_lended'] ?? '')?>">
+                            <button type="submit">Return</button></li>
+
+                    </form>
+
+                <?php endforeach;
             
             else :
                 
