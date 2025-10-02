@@ -326,7 +326,7 @@ table td[colspan] {
   align-items: center;
 }
 
-#register-login-form input[type="text"], input[type="email"] {
+#register-login-form input[type="text"], input[type="email"], #lend-book input[type="text"], input[type="email"], #edit-profile-form input[type="text"], input[type="email"] {
   padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid #7bc2b4;
@@ -334,7 +334,7 @@ table td[colspan] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#register-login-form input[type="text"]:focus, input[type="email"]:focus {
+#register-login-form input[type="text"]:focus, input[type="email"]:focus, #lend-book input[type="text"]:focus, input[type="email"]:focus, #edit-profile-form input[type="text"]:focus, input[type="email"]:focus {
   border-color: #1abc9c;
   box-shadow: 0 0 5px rgba(26,188,156,0.4);
   outline: none;
@@ -419,3 +419,11 @@ table td[colspan] {
   text-align: center;
 }
 
+#lend-book {
+  text-align: center;
+}
+
+#edit-profile-form div {
+  text-align: center;
+  margin: 20px;
+}

@@ -25,7 +25,6 @@
                 <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
                 <li class="nav-links"><a href="/catalogue/search-to-lend">Lending book</a></li>
                 <li class="nav-links"><a href="/author">For author</a></li>
-                <li class="nav-links"><a href="">FAQs</a></li>
                 <?php if($role == "admin") : ?>
                 <li class="nav-links"><a href="/admin">Admin</a></li>
                 <?php endif; ?>    
@@ -49,7 +48,6 @@
                 <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
                 <li class="nav-links"><a href="/catalogue">Lending book</a></li>
                 <li class="nav-links"><a href="/author">For author</a></li>
-                <li class="nav-links"><a href="">FAQs</a></li>
             </ul>        
             <div>
                 <a href="/register">
