@@ -25,10 +25,10 @@
         foreach ($_SESSION['catalogue'] as $book) :
     ?>
             <tr>
-                <td><:php echo htmlspecialchars($book['book_title]); ?></td>
-                <td><:php echo htmlspecialchars($book['book_pages]); ?></td>
-                <td><:php echo htmlspecialchars($book['book_year]); ?></td>
-                <td><:php echo htmlspecialchars($book['book_genre]); ?></td>
+                <td><?php echo htmlspecialchars($book['book_title']); ?></td>
+                <td><?php echo htmlspecialchars($book['book_pages']); ?></td>
+                <td><?php echo htmlspecialchars($book['book_year']); ?></td>
+                <td><?php echo htmlspecialchars($book['book_genre']); ?></td>
             </tr>
     <?php
         endforeach;       

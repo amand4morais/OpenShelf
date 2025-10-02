@@ -17,16 +17,13 @@
     ?>
 
             <li class="user-card">
-                <div class="user-info">
-                    <strong>Name:</strong> <?php echo htmlspecialchars($user['name_user']); ?>
-                </div>
-                <div class="user-info">
+                <div class="username">
                     <strong>Username:</strong> <?php echo htmlspecialchars($user['username']); ?>
                 </div>
-                <div class="user-info">
+                <div class="user-email">
                     <strong>Email:</strong> <?php echo htmlspecialchars($user['email_user']);  ?>
                 </div>
-                <div class="user-info">
+                <div class="user-cpf">
                     <strong>CPF>:</strong> <?php echo htmlspecialchars($user['cpf']);  ?>
                 </div>
             </li>

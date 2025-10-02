@@ -27,3 +27,7 @@
         ?>
     </ul>
 </div>
+<a href="/login/logoff">
+    <button class="btn-logoff">Logoff</button>
+</a>
+
