@@ -27,6 +27,10 @@
         ?>
     </ul>
 </div>
+
+<a href="/my-profile/edit">
+    <button class="btn-signin">Edit Profile</button>
+</a>
 <a href="/login/logoff">
     <button class="btn-logoff">Logoff</button>
 </a>

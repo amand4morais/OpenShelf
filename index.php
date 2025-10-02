@@ -4,9 +4,9 @@
     $page = substr($_SERVER['REQUEST_URI'], 1);  
     $routes = explode('/', $page);
         
-    $resource = empty($routes[0]) ? 'main-page' : $routes[0];//resources são os controllers
+    $resource = empty($routes[0]) ? 'main-page' : $routes[0];
 
-    $action = $routes[1] ?? 'list';//são as ações - CRUD
+    $action = $routes[1] ?? 'list';
 
     $controller = "controllers/$resource.controller.php";
 
