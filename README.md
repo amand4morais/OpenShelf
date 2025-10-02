@@ -12,7 +12,6 @@ O sistema é caracterizado por um conjunto de funcionalidades básicas para gere
 | **Catalogue** | Permite a consulta ao acervo de livros cadastrados. |
 | **Lending Book** | Direciona para a funcionalidade de empréstimo de livros do acervo. |
 | **For Author** | Página dedicada para autores independentes publicarem seus livros no acervo. |
-| **FAQs** | Página de atendimento ao cliente e perguntas frequentes. |
 | **Sign In** | Página para o cadastro de novos usuários na biblioteca digital. |
 | **Login** | Destinado a usuários já cadastrados acessarem suas contas e consultarem seus livros emprestados. |
 
