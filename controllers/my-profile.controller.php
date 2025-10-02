@@ -36,6 +36,25 @@ elseif ($action == 'edit') :
 
         header('Location: /my-profile');
     
+    elseif($action == 'delete') :
+
+        $username_to_delete = $_SESSION['username'] ?? null;
+
+        if ($username_to_delete && isset($_SESSION['user'])) :
+            foreach ($_SESSION['user'] as $index => $user) :
+                if ($user['username'] === $username_to_delete) :
+                    unset($_SESSION['user'][$index]);
+                break;
+                endif;
+            endforeach;
+
+    $_SESSION['logged'] = "false";
+    unset($_SESSION['username']);
+
+    header('Location: /main-page');
+    exit();
+        endif;
+    
 endif;
 
 require_once('views.php');

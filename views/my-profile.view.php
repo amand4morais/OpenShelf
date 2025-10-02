@@ -37,8 +37,8 @@
         <a href="/my-profile/edit">
             <button class="btn-update">Edit Profile</button>
         </a>
-        <a href="">
-            <button class="btn-delete">Detele your profile</button>
+        <a href="/my-profile/delete" onclick="return confirm('Você tem certeza que deseja deletar sua conta? Esta ação é permanente.');">
+            <button class="btn-delete">Delete profile</button>
         </a>
     </div>
 </section>
