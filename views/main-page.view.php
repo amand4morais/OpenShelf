@@ -20,17 +20,14 @@
       <p>Author: John Smith</p>
     </div>
     <div class="book-card">
-      <img src="assets/book2.jpg" alt="Book 2">
       <h3>Whispers of Pages</h3>
       <p>Author: Anna Johnson</p>
     </div>
     <div class="book-card">
-      <img src="assets/book3.jpg" alt="Book 3">
       <h3>Digital Dreams</h3>
       <p>Author: Michael Brown</p>
     </div>
     <div class="book-card">
-      <img src="assets/book4.jpg" alt="Book 4">
       <h3>Infinite Stories</h3>
       <p>Author: Sarah Davis</p>
     </div>

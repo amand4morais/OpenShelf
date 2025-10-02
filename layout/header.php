@@ -24,7 +24,7 @@
                 <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
                 <li class="nav-links"><a href="/catalogue/search-to-lend">Lending book</a></li>
                 <li class="nav-links"><a href="/author">For author</a></li>
-                <li class="nav-links"><a href="">FAQs</a></li>
+                <li class="nav-links"><a href="/faqs">FAQs</a></li>
             </ul>
 
             <a href="/my-profile">    
@@ -45,7 +45,7 @@
                 <li class="nav-links"><a href="/catalogue">Catalogue</a></li>
                 <li class="nav-links"><a href="/catalogue/search-to-lend">Lending book</a></li>
                 <li class="nav-links"><a href="/author">For author</a></li>
-                <li class="nav-links"><a href="">FAQs</a></li>
+                <li class="nav-links"><a href="/faqs">FAQs</a></li>
             </ul>        
             <div>
                 <a href="/register">

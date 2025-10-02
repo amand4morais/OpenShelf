@@ -1,5 +1,5 @@
-<section class="register-user">
-    <h2 class="register-home">Edit My Profile</h2>
+<section class="insert-book">
+    <h2 class="book-home">Edit My Profile</h2>
 <?php
     $current_user_data = [];
     $username_session = $_SESSION["username"] ?? null;
@@ -20,9 +20,11 @@
 
 <form id="edit-profile-form" method="POST" action="/my-profile/update">
         <div class="user-email">
+            <p class="question">Your new email</p>
             <input type="email" name="user-email" placeholder="E-mail" value="<?= htmlspecialchars($current_user_data['user_email']) ?>" required>
         </div>
         <div class="user-password">
+            <p class="question">Your new password</p>
             <input type="text" name="user-password" placeholder="Password" value="<?= htmlspecialchars($current_user_data['user_password']) ?>" required>
         </div>
         <div>

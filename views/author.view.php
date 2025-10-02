@@ -2,7 +2,7 @@
     <h1>Author Portal</h1>
     <p>Welcome! This space is dedicated to independent authors who want to publish their books!</p>
     <div class="button_add_book">
-        <a href="/author/register-book"> 
+        <a href="/catalogue/insert"> 
             <button>Register a New Book</button>
         </a>      
     </div>
