@@ -1,5 +1,3 @@
-<section class="register-login-user">
-    <h2 class="book-home">Register on OpenShelf</h2>
 <?php
 
     $logged = $_SESSION["logged"] ?? "false";
@@ -14,7 +12,7 @@
 
 <?php else : ?>
 
-<section class="register-user">
+<section class="register-login-user">
     <h2 class="register-home">Register on OpenShelf</h2>
 
     <form id="register-login-form" method="POST" action="/register/save">

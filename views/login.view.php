@@ -1,5 +1,3 @@
-<section class="register-login-user">
-    <h2 class="book-home">Login on OpenShelf</h2>
 <?php
 
     $logged = $_SESSION["logged"] ?? "false";
@@ -14,8 +12,8 @@
 
 <?php else : ?>
 
-<section class="login-user">
-    <h2 class="login-home">Login on OpenShelf</h2>
+<section class="register-login-user">
+    <h2 class="book-home">Login on OpenShelf</h2>
 
 <?php if (isset($_SESSION['error'])): ?>
     <div class="error-message">
