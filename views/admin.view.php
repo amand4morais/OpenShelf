@@ -22,20 +22,20 @@
                 
                 foreach($_SESSION['user'] as $users) :?> 
                     
-                        echo '<tr><td>' . $users['username'] . '</td>';
+                        <?php echo '<tr><td>' . $users['username'] . '</td>';
                         echo '<td>' . $users['user_email'] . '</td>';
                         echo '<td>' . $users['user_cpf'] . '</td>';
                         echo '<td>' . $users['user_password'] . '</td>';?>
                         
-                        <form id="user-delete" method="POST" action="/admin/delete-user">
+                        <form id="user-delete" method="POST" action="/admin/delete">
 
-                            <input type="hidden" name="user" value="<?= htmlspecialchars($users['user_email'])?>">
+                            <input type="hidden" name="user" value="<?= htmlspecialchars($users['username'])?>">
                             <td><button type="submit">Delete</button></td>
 
                         </form>
-                        <form id="user-update" method="POST" action="/admin/update-user">
+                        <form id="user-update" method="POST" action="/admin/edit">
 
-                            <input type="hidden" name="user" value="<?= htmlspecialchars($users['user_email'])?>">
+                            <input type="hidden" name="user" value="<?= htmlspecialchars($users['username'])?>">
                             <td><button type="submit">Edit</button></td>
 
                         </form>

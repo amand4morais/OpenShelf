@@ -1,5 +1,5 @@
 <section class="register-user">
-    <h2 class="register-home">Edit My Profile</h2>
+    <h2 class="register-home">Edit Profile</h2>
 <?php
     $current_user_data = [];
     $username_session = $_SESSION["username"] ?? null;

@@ -3,6 +3,26 @@
         <h1 class="book-home">My profile</h1>
     </div>
 
+    <div class="account-data">
+        <?php
+            $current_user_data = [];
+            $username_session = $_SESSION["username"] ?? null;
+
+            if ($username_session && isset($_SESSION['user'])) :
+                foreach ($_SESSION['user'] as $user) :
+                    if ($user['username'] === $username_session) :
+                        $current_user_data = $user;
+                        break;
+                    endif;
+                endforeach;
+            endif;
+
+            echo 'Name: ' . $current_user_data['username'] . '<br>';
+            echo 'E-mail ' . $current_user_data['user_email'] . '<br>';
+            echo 'CPF: ' . $current_user_data['user_cpf'] . '<br>';
+        ?>
+    </div>
+
 <div class="books-list">
         <div class="lend-title">
             <h3>My books</h3>

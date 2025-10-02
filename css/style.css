@@ -51,6 +51,12 @@ body {
   color: #1abc9c;
 }
 
+.account-data {
+
+  display: flex;
+  justify-content: center;
+}
+
 .btn-signin,
 .btn-login, .btn-logoff, .btn-update, .btn-delete {
   margin-left: 10px;
