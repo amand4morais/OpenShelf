@@ -1,15 +1,15 @@
 <div class="author-header">
     <h1>Author Portal</h1>
     <p>Welcome! This space is dedicated to independent authors who want to publish their books!</p>
+    <div class="button_add_book">
+        <a href="/author/register-book"> 
+            <button>Register a New Book</button>
+        </a>      
+    </div>
 </div>
 
-<div class="button_add_book">
-    <a href="/author/register-book"> 
-        <button>Register a New Book</button>
-    </a>      
-</div>
 
-<h2>Your Registered Books</h2>
+<h2 class="title-authors">Your Registered Books</h2>
 <table>
     <tr>
         <th>Title</th>

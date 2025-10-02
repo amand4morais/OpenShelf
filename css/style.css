@@ -52,7 +52,7 @@ body {
 }
 
 .btn-signin,
-.btn-login {
+.btn-login, .btn-logoff, .btn-update, .btn-delete {
   margin-left: 10px;
   padding: 8px 15px;
   border: none;
@@ -91,12 +91,12 @@ body {
   background-color: #16a085;
 }
 
-.btn-login {
+.btn-login, .btn-update {
   background-color: #3498db;
   color: white;
 }
 
-.btn-login:hover {
+.btn-login:hover, .btn-update:hover {
   background-color: #2980b9;
 }
 
@@ -334,5 +334,82 @@ table td[colspan] {
   outline: none;
 } 
   
+/* Parte do my profile */
 
+.books-list {
+  text-align: center;
+}
+
+.btns-profile {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btn-delete {
+  background-color: rgb(184, 0, 0);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: rgb(154, 1, 1);
+}
+
+.btn-logoff {
+  background-color: rgb(211, 156, 15);
+  color: white;
+}
+
+.btn-logoff:hover {
+  background-color: darkgoldenrod;
+}
+
+
+/* Parte do for authors */
+
+.author-header {
+  background: linear-gradient(135deg, #bd6edc, #bb7ad7); /* roxo degradê */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 15px 15px; /* borda arredondada só embaixo */
+}
+
+.author-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.author-header p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botão "Register a New Book" */
+.button_add_book {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.button_add_book button {
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button_add_book button:hover {
+  background-color: #16a085;
+}
+
+.title-authors {
+  font-size: 1.8rem;
+  margin: 40px 20px 20px;
+  padding-left: 10px;
+  text-align: center;
+}
 
