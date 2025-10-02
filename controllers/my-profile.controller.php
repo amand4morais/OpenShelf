@@ -14,19 +14,20 @@ elseif ($action == 'edit') :
 
             $new_user_email = $_POST['user_email'] ?? null;
             $new_user_password = $_POST['user_password'] ?? null;
-            $current_session_password = $_SESSION['password'] ?? null;
+            $current_session_email = $_SESSION['email'] ?? null;
 
             if (!empty($new_user_email) && !empty($new_user_password) && isset($_SESSION['user'])) :
 
                 foreach ($_SESSION['user'] as $index => $user) :
                     
-                    if($user['password'] === $current_session_password) :
+                    if($user['email'] === $current_session_email) :
 
                         $_SESSION['user'][$index]['user_email'] = $new_user_email;
                         $_SESSION['user'][$index]['user_password'] = $new_user_password;
 
                     endif;
 
+                    break;
                 endforeach;
 
             endif;
