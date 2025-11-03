@@ -1,12 +1,28 @@
 <?php
 
+$userRepository = new UserRepository($db);
+$lendingRepository = new LendingRepository($db);
+
+$username_session = $_SESSION['username'] ?? null;
+$current_user_data = [];
+$my_books_data = [];
+
 if($action == 'list') :
 
     $action = 'my-profile';
 
+    if ($username_session) :
+        $current_user_data = $userRepository->findByUsername($username_session);
+        $my_books_data = $lendingRepository->getBooksByUsername($username_session);
+    endif;
+
 elseif ($action == 'edit') :
 
     $action = 'edit-profile';
+
+    if ($username_session) :
+        $current_user_data = $userRepository->findByUsername($username_session);
+    endif;
 
     elseif ($action == 'update') :
 
@@ -14,66 +30,41 @@ elseif ($action == 'edit') :
 
             $new_user_email = $_POST['user_email'] ?? null;
             $new_user_password = $_POST['user_password'] ?? null;
-            $current_session_email = $_SESSION['email'] ?? null;
 
-            if (!empty($new_user_email) && !empty($new_user_password) && isset($_SESSION['user'])) :
+            if (!empty($new_user_email) && !empty($new_user_password) && $username_session) :
 
-                foreach ($_SESSION['user'] as $index => $user) :
-                    
-                    if($user['email'] === $current_session_email) :
-
-                        $_SESSION['user'][$index]['user_email'] = $new_user_email;
-                        $_SESSION['user'][$index]['user_password'] = $new_user_password;
-
-                    endif;
-
-                    break;
-                endforeach;
+                $userRepository->updateUser($username_session, $new_user_email, $new_user_password);
 
             endif;
 
         endif;
 
         header('Location: /my-profile');
+        exit();
     
-    elseif($action == 'delete') :
+    elseif ($action == 'delete') :
 
-        $username_to_delete = $_SESSION['username'] ?? null;
-
-        if ($username_to_delete && isset($_SESSION['user'])) :
-            foreach ($_SESSION['user'] as $index => $user) :
-                if ($user['username'] === $username_to_delete) :
-                    unset($_SESSION['user'][$index]);
-                break;
-                endif;
-            endforeach;
-
-    $_SESSION['logged'] = "false";
-    unset($_SESSION['username']);
-
-    header('Location: /main-page');
-    exit();
+        if ($username_session) :
+            $userRepository->deleteUser($username_session);
         endif;
+
+        $_SESSION['logged'] = "false";
+        unset($_SESSION['username']);
+        unset($_SESSION['role']);
+
+        header('Location: /main-page');
+    exit();
     
 elseif($action == 'return') :
 
-    $book_return = $_POST['book'];
+    $book_return = $_POST['book'] ?? null;
 
-    foreach($_SESSION['my-books'] as $index => $books) :
-
-        if($book_return == $books['book_lended']) :
-
-            unset($_SESSION['my-books'][$index]);
-            $_SESSION['my-books'] = array_values($_SESSION['my-books']);
-
-            break;
-
-        endif;
-
-    endforeach;
+    if($book_return && $username_session) :
+        $lendingRepository->returnBook($username_session, $book_return);
+    endif;
 
     header("Location: /my-profile");
-
+    exit();
 endif;
 
 require_once('views.php');
